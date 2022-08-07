@@ -1,22 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import NameTag from './NameTag.js';
-import './styles.css';
-import { names } from './data';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App.js";
 
-//Callback function
-const renderNameTag = (name) => <NameTag name={name.name} key={name.id} />;
+import "./styles.css";
 
-const App = () => {
-  const NameTagElements = names.map(renderNameTag);
-
-  return (
-    <div className="App">
-      <h1>Name Tag Generator</h1>
-      {NameTagElements}
-    </div>
-  );
-};
-
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
